@@ -2,7 +2,7 @@
 Examples of while and for loops for the Iteration activity
 
 @author: Susan Fox
-@author: Amin Alhashim
+@author: Kampe Rushoka
 """
 
 
@@ -18,6 +18,8 @@ def print_every_other(x):
     print("Done!")
 
 
+
+
 def square_user_nums():
     """
     Reads in numbers from the user, stopping when the user enters a negative
@@ -31,6 +33,7 @@ def square_user_nums():
         user_inp = input("Enter the next number (negative to quit): ")
         user_num = int(user_inp)
 
+ #It stops, when the number is negative.
 
 def sum_to_n(top_num):
     """
@@ -45,6 +48,7 @@ def sum_to_n(top_num):
 
     return total
 
+print(sum_to_n(20))
 
 def next_word(text):
     """
@@ -70,30 +74,30 @@ def print_seperator_line():
     print("------------------------------")
 
 
-if __name__ == '__main__':
-    print_seperator_line()
-    print("Sample calls to printEveryOther:")
-    print("printEveryOther(11) does:")
-    print_every_other(11)
-    print("printEveryOther(4) does:")
-    print_every_other(4)
-
-    print_seperator_line()
-    print("Sample call to squareUserNums:")
-    square_user_nums()
-
-    print_seperator_line()
-    print("Sample calls to sumToN:")
-    print("sumToN(3) does:")
-    print(sum_to_n(3))
-    print("sumToN(100) does:")
-    print(sum_to_n(100))
-    
-    print_seperator_line()
-    print("Sample calls to nextWord:")
-    print("nextWord('Friends, Romans, countrymen') does:")
-    print(next_word('Friends, Romans, countrymen'))
-    print("nextWord('Bananas and apples') does:")
-    print(next_word('Bananas and apples'))
-    print("nextWord('Frederick!') does:")
-    print(next_word('Frederick!'))
+# if __name__ == '__main__':
+#     print_seperator_line()
+#     print("Sample calls to printEveryOther:")
+#     print("printEveryOther(11) does:")
+#     print_every_other(11)
+#     print("printEveryOther(4) does:")
+#     print_every_other(4)
+#
+#     print_seperator_line()
+#     print("Sample call to squareUserNums:")
+#     square_user_nums()
+#
+#     print_seperator_line()
+#     print("Sample calls to sumToN:")
+#     print("sumToN(3) does:")
+#     print(sum_to_n(3))
+#     print("sumToN(100) does:")
+#     print(sum_to_n(100))
+#
+#     print_seperator_line()
+#     print("Sample calls to nextWord:")
+#     print("nextWord('Friends, Romans, countrymen') does:")
+#     print(next_word('Friends, Romans, countrymen'))
+#     print("nextWord('Bananas and apples') does:")
+#     print(next_word('Bananas and apples'))
+#     print("nextWord('Frederick!') does:")
+#     print(next_word('Frederick!'))
