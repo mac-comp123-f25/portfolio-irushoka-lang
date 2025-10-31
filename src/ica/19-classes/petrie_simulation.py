@@ -37,8 +37,8 @@ def print_employee_list(lst):
     Given a list of employees, this method will print the details of each employee
     by using the print() method
     """
-    # TODO: Implement this function then remove this line
-    pass
+    for employee in list:
+        print(Employee)
 
 
 def create_employees(total_num):
@@ -104,20 +104,20 @@ if __name__ == "__main__":
            Employee('Woman', False)]
     print_employee_list(lst)
 
-    "<----- Test code for create_employees ----->"
-    employees = create_employees(10)
-    print_employee_list(employees)
-
-    "<----- Test code for create_commenters ----->"
-    create_commenters(employees)
-    print_employee_list(employees)
-
-    "<----- Test code for generate_comments ----->"
-    generate_comments(employees)
-    print_employee_list(employees)
-
-    "<----- Test code for average_comments ----->"
-    print(average_comments(employees))
-
-    "<----- Run the simulation ----->"
-    # main()  # <-- KEEP THIS, Uncomment it after implementing all the functions
+    # "<----- Test code for create_employees ----->"
+    # employees = create_employees(10)
+    # print_employee_list(employees)
+    #
+    # "<----- Test code for create_commenters ----->"
+    # create_commenters(employees)
+    # print_employee_list(employees)
+    #
+    # "<----- Test code for generate_comments ----->"
+    # generate_comments(employees)
+    # print_employee_list(employees)
+    #
+    # "<----- Test code for average_comments ----->"
+    # print(average_comments(employees))
+    #
+    # "<----- Run the simulation ----->"
+    # # main()  # <-- KEEP THIS, Uncomment it after implementing all the functions
