@@ -19,8 +19,10 @@ class Employee:
         saves those values to instance variables. It also initializes the
         variable that holds the comments received by this employee to zero.
         """
-        # TODO: Implement this method then remove this line
-        pass
+        self.gender = gender
+        self.will_comment = will_comment
+        self.comments_received = 0
+
 
     def __str__(self):
         """
@@ -29,7 +31,19 @@ class Employee:
         return (self.gender.rjust(5)
                 + ": "
                 + str(self.comments_received)
-                + " sexist comments received")
+                + " sexist comments received"
+                + str(self.will_comment)
+                + " commenter status")
+
+    def set_commenter_status(self, status):
+        self.will_comment = status
+
+    def receive_sexist_comment(self):
+        self.comments_received +=1
+
+    def get_gender(self):
+        return self.gender
+
 
 
 def print_employee_list(lst):
@@ -37,8 +51,8 @@ def print_employee_list(lst):
     Given a list of employees, this method will print the details of each employee
     by using the print() method
     """
-    for employee in list:
-        print(Employee)
+    for e in lst:
+        print(e)
 
 
 def create_employees(total_num):
@@ -46,8 +60,31 @@ def create_employees(total_num):
     Takes in the number of employees to make, builds and returns a list that contains
     that many employees. It ensures that ~80% are men and the rest women.
     """
-    # TODO: Implement this function then remove this line
-    pass
+    man = math.floor(0.8 * total_num)
+    woman = total_num - man
+
+    male_employees = []
+
+    for employee in range(man):
+        m_employee= Employee('man', False)
+        male_employees.append(m_employee)
+
+    female_employees = []
+    for employee in range(woman):
+        f_employee = Employee('woman', False)
+        female_employees.append(f_employee)
+
+    return male_employees + female_employees
+
+
+
+
+
+
+
+
+
+
 
 
 def create_commenters(lst):
@@ -55,8 +92,11 @@ def create_commenters(lst):
     Given a list of employees, make 20% of each gender be sexist employees. This
     method should not return anything.
     """
-    # TODO: Implement this function then remove this line
-    pass
+    for employee in lst:
+        sexist_probability = random.random()
+        if sexist_probability < 0.2:
+            employee.set_commenter_status(True)
+
 
 
 def generate_comments(lst):
@@ -104,13 +144,16 @@ if __name__ == "__main__":
            Employee('Woman', False)]
     print_employee_list(lst)
 
-    # "<----- Test code for create_employees ----->"
-    # employees = create_employees(10)
-    # print_employee_list(employees)
+
+
+    "<----- Test code for create_employees ----->"
+    employees = create_employees(10)
+    print_employee_list(employees)
+
     #
-    # "<----- Test code for create_commenters ----->"
-    # create_commenters(employees)
-    # print_employee_list(employees)
+    "<----- Test code for create_commenters ----->"
+    create_commenters(employees)
+    print_employee_list(employees)
     #
     # "<----- Test code for generate_comments ----->"
     # generate_comments(employees)
