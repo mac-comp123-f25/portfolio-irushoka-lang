@@ -241,20 +241,3 @@ drawhair(smile,80, -40,150)
 drawhair(smile,-100, -40,150)
 drawhair(smile,0, -40,150)
 win.exitonclick()
-
-
-
-
-
-
-
-
-
-#I need two black shoes
-
-#I need one big eye
-
-#I need one big glass
-
-
-#I need 3 hairs on top.
